@@ -33,6 +33,13 @@ listint_t *insert_node(listint_t **head, int number)
 	if (head)
 	{
 		new_node = calloc(sizeof(listint_t), sizeof(char));
+
+		if (!(*head))
+		{
+			*head = new_node;
+			return new_node;
+		}
+
 		fill_after_node(head);
 		new_node->n = number;
 		tmp = *head;
