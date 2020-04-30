@@ -32,7 +32,7 @@ listint_t *insert_node(listint_t **head, int number)
 
 	if (head)
 	{
-		new_node = calloc(sizeof(listint_t), sizeof(char));
+		new_node = malloc(sizeof(listint_t));
 		new_node->n = number;
 
 		if (!(*head))
